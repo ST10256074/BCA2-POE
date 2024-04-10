@@ -72,6 +72,8 @@ namespace BCA2_POE
                 string s = Console.ReadLine();
                 rec.steps.Add(s);
             }
+            Console.WriteLine();
+            Console.WriteLine(rec.toString());
 
 
 

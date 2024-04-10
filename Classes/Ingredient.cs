@@ -1,11 +1,11 @@
 ﻿using System;
 
-public class Class1
+public class Ingredient
 {
-	string name;
-	float quantity;
-	string unitOfMeasurement;
-	public Ingredient()
+	public string name { get; set; }
+    public float quantity { get; set; }
+    public string unitOfMeasurement { get; set; }
+    public Ingredient()
 	{
 	}
 }

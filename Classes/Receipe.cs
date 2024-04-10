@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Collections;
 
-public class Class1
+public class Receipe
 {
-	string name;
-	int iNumIngredients;
-	int iNumSteps;
+	public string name { get; set; }
+	public int iNumIngredients { get; set; }
+    public int iNumSteps { get; set; }
 
-	ArrayList ingredients = new ArrayList;
+	public ArrayList ingredients { get; set; }
+    public ArrayList steps { get; set; }
 
-	public Recipe()
+    public Receipe()
 	{
+		ingredients = new ArrayList();
+		steps = new ArrayList();
 	}
 
 }

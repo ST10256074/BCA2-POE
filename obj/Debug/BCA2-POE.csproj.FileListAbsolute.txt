@@ -1,0 +1,7 @@
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\bin\Debug\BCA2-POE.exe.config
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\bin\Debug\BCA2-POE.exe
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\bin\Debug\BCA2-POE.pdb
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\obj\Debug\BCA2-POE.csproj.AssemblyReference.cache
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\obj\Debug\BCA2-POE.csproj.CoreCompileInputs.cache
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\obj\Debug\BCA2-POE.exe
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\obj\Debug\BCA2-POE.pdb

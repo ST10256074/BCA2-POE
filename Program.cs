@@ -44,7 +44,17 @@ namespace BCA2_POE
             Console.WriteLine("Enter the number of ingredients:");
             iNumIngredients =  Console.ReadLine();
 
+            Receipe rec = new Receipe();
 
+
+            for (int i = 0; i < iNumIngredients; i++)
+            {
+                Ingredient ing = new Ingredient();
+                ing.name = Console.ReadLine("Ingredient Name");
+                ing.quantity = Console.ReadLine("Ingredient Quantity");
+                ing.unitOfMeasurement = Console.ReadLine("Ingredient Unit of Measurement");
+
+            }
 
 
 

@@ -5,6 +5,7 @@ public class Receipe
     public string name { get; set; }
     public int iNumIngredients { get; set; }
     public int iNumSteps { get; set; }
+    public float fScale { get; set; }
 
     public ArrayList ingredients { get; set; }
     public ArrayList steps { get; set; }

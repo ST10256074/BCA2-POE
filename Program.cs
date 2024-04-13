@@ -1,33 +1,92 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System;
 
 namespace BCA2_POE
 {
     internal class Program
     {
+        static Receipe rec = new Receipe();
+
+
         static void Main(string[] args)
 
+        {
+
+
+
+            Console.WriteLine("Welcome to the Receipe Console Application");
+
+            View();
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey(); // Keep console open 
+
+        }
+
+        static void View()
+        {
+            Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
+            int entry = int.Parse(Console.ReadLine());
+            switch (entry)
+            {
+                case 1:
+                    ReceipeEntry();
+                    break;
+                case 2:
+                    ViewReceipe();
+                    break;
+                case 3:
+                    ModifyReceipe();
+                    break;
+                case 4:
+                    System.Environment.Exit(0);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private static void ModifyReceipe()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Would you like to scale the receipe?");
+            string input = Console.ReadLine();
+            if (input.Contains("y") || input.Contains("Y"))
+            {
+                Console.WriteLine("Enter scaled amount:");
+                float scalableAmount = float.Parse(Console.ReadLine());
+                rec.fScale = scalableAmount;
+            }
+        }
+
+        private static void ViewReceipe()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ReceipeEntry()
         {
             string sReceiptName = "";
             int iNumIngredients = 0;
             int iSteps = 0;
 
 
-            Receipe rec = new Receipe();
-            Console.WriteLine("Welcome to the Receipe Console Application");
-
             Console.WriteLine("Enter the receipt name");
-            sReceiptName =  Console.ReadLine();
+            sReceiptName = Console.ReadLine();
             rec.name = sReceiptName;
 
             Console.WriteLine("Enter the number of ingredients:");
-            iNumIngredients = int.Parse( Console.ReadLine());
+            iNumIngredients = int.Parse(Console.ReadLine());
             rec.iNumIngredients = iNumIngredients;
 
 
@@ -57,27 +116,7 @@ namespace BCA2_POE
             }
             Console.WriteLine();
             Console.WriteLine(rec.toString());
-
-            Console.WriteLine("");
-            Console.WriteLine("Would you like to scale the receipe?");
-            string input = Console.ReadLine();
-            if (input.Contains("y") || input.Contains("Y"))
-            {
-                Console.WriteLine("Enter scaled amount:");
-                float scalableAmount = float.Parse(Console.ReadLine());
-                rec.fScale = scalableAmount;
-            }
-
-
-
-
-
-
-
-
-
-            Console.ReadKey();
-
         }
     }
+
 }

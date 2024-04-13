@@ -4,8 +4,11 @@ namespace BCA2_POE
 {
     internal class Program
     {
+        // Declaring variables
         static Receipe rec = new Receipe();
 
+
+        //------------------------------------------------------------------------------------------------------------------------//
 
         static void Main(string[] args)
         {
@@ -19,6 +22,8 @@ namespace BCA2_POE
 
 
         }
+
+        //------------------------------------------------------------------------------------------------------------------------//
 
         static void View()
         {
@@ -45,6 +50,8 @@ namespace BCA2_POE
             }
         }
 
+        //------------------------------------------------------------------------------------------------------------------------//
+
         private static void ModifyReceipe()
         {
             Console.WriteLine("");
@@ -59,11 +66,15 @@ namespace BCA2_POE
             ViewReceipe();
         }
 
+        //------------------------------------------------------------------------------------------------------------------------//
+
         private static void ViewReceipe()
         {
             Console.WriteLine("");
             Console.WriteLine(rec.toString());
         }
+
+        //------------------------------------------------------------------------------------------------------------------------//
 
         private static void ReceipeEntry()
         {
@@ -102,7 +113,7 @@ namespace BCA2_POE
 
             for (int i = 0; i < iSteps; i++)
             {
-                Console.WriteLine("Enter Step Desription");
+                Console.WriteLine("\nStep: " + (i + 1) + "\n");
                 string s = Console.ReadLine();
                 rec.steps.Add(s);
             }
@@ -112,3 +123,6 @@ namespace BCA2_POE
     }
 
 }
+
+
+//------------------------------------------...ooo000 END OF FILE 000ooo...------------------------------------------------------//

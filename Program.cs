@@ -40,6 +40,7 @@ namespace BCA2_POE
                     System.Environment.Exit(0);
                     break;
                 default:
+                    Console.WriteLine("Please enter correct value");
                     break;
             }
         }
@@ -55,12 +56,13 @@ namespace BCA2_POE
                 float scalableAmount = float.Parse(Console.ReadLine());
                 rec.fScale = scalableAmount;
             }
+            ViewReceipe();
         }
 
         private static void ViewReceipe()
         {
             Console.WriteLine("");
-            throw new NotImplementedException();
+            Console.WriteLine(rec.toString());
         }
 
         private static void ReceipeEntry()
@@ -81,6 +83,7 @@ namespace BCA2_POE
 
             for (int i = 0; i < iNumIngredients; i++)
             {
+                Console.WriteLine("\nIngredient: " + (i+1) + "\n");
                 Ingredient ing = new Ingredient();
                 Console.WriteLine("Ingredient Name");
                 ing.name = Console.ReadLine();
@@ -90,9 +93,9 @@ namespace BCA2_POE
                 ing.unitOfMeasurement = Console.ReadLine();
 
                 rec.ingredients.Add(ing);
-                Console.WriteLine("\nNext Ingredient\n");
             }
 
+            Console.WriteLine("");
             Console.WriteLine("Enter number of steps");
             iSteps = int.Parse(Console.ReadLine());
             rec.iNumSteps = iSteps;

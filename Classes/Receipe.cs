@@ -19,6 +19,7 @@ public class Receipe
     public string toString()
     {
         string s = "";
+        s = s + "------------\n";
         s = s + "Receipe: " + name;
         s = s + "\n\nIngredients: ";
         s = s + "\nNo. Ingredients: " + iNumIngredients;
@@ -27,15 +28,16 @@ public class Receipe
         for (int i = 0; i < ingredients.Count; i++)
         {
             Ingredient ins = (Ingredient) ingredients[i];
-            s = s + "\n"+ i +" : "+ ins.name + " " + ins.quantity +" "+ ins.unitOfMeasurement;
+            s = s + "\n"+ (i+1) +" : "+ ins.name + " " + ins.quantity +" "+ ins.unitOfMeasurement;
         }
         s = s + "\n\nSteps: ";
         s = s + "\nNo. Steps: " + iNumSteps;
 
         for (int i = 0; i < steps.Count; i++)
         {
-            s = s +"\n"+ i + " : " + steps[i];
+            s = s +"\n"+ (i+1) + " : " + steps[i];
         }
+        s = s + "\n------------";
         return s;
     }
 }

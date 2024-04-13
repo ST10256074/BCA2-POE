@@ -8,33 +8,21 @@ namespace BCA2_POE
 
 
         static void Main(string[] args)
-
         {
-
-
 
             Console.WriteLine("Welcome to the Receipe Console Application");
 
-            View();
+            while (true)
+            {
+                View();
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-            Console.ReadKey(); // Keep console open 
 
         }
 
         static void View()
         {
+            Console.WriteLine("");
             Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
             int entry = int.Parse(Console.ReadLine());
             switch (entry)
@@ -71,6 +59,7 @@ namespace BCA2_POE
 
         private static void ViewReceipe()
         {
+            Console.WriteLine("");
             throw new NotImplementedException();
         }
 
@@ -80,7 +69,7 @@ namespace BCA2_POE
             int iNumIngredients = 0;
             int iSteps = 0;
 
-
+            Console.WriteLine("");
             Console.WriteLine("Enter the receipt name");
             sReceiptName = Console.ReadLine();
             rec.name = sReceiptName;

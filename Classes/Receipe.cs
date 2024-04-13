@@ -14,6 +14,7 @@ public class Receipe
     {
         ingredients = new ArrayList();
         steps = new ArrayList();
+        fScale = 1;
     }
 
     public string toString()
@@ -28,7 +29,7 @@ public class Receipe
         for (int i = 0; i < ingredients.Count; i++)
         {
             Ingredient ins = (Ingredient) ingredients[i];
-            s = s + "\n"+ (i+1) +" : "+ ins.name + " " + ins.quantity +" "+ ins.unitOfMeasurement;
+            s = s + "\n"+ (i+1) +" : "+ ins.name + " " + (ins.quantity * fScale ) +" "+ ins.unitOfMeasurement;
         }
         s = s + "\n\nSteps: ";
         s = s + "\nNo. Steps: " + iNumSteps;

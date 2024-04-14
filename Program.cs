@@ -14,7 +14,7 @@ namespace BCA2_POE
         {
 
             Console.WriteLine("Welcome to the Receipe Console Application");
-
+            // Main Loop
             while (true)
             {
                 View();
@@ -24,7 +24,9 @@ namespace BCA2_POE
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
-
+        /// <summary>
+        /// The View manager that allows for user-input to direct them to the right methods
+        /// </summary>
         static void View()
         {
             Console.WriteLine("");
@@ -51,12 +53,16 @@ namespace BCA2_POE
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
-
+        /// <summary>
+        /// Allows the modification of the receipe by scaling the amounts required for the Receipe
+        /// </summary>
         private static void ModifyReceipe()
         {
+            //User Entry
             Console.WriteLine("");
             Console.WriteLine("Would you like to scale the receipe?");
             string input = Console.ReadLine();
+            //User choice 
             if (input.Contains("y") || input.Contains("Y"))
             {
                 Console.WriteLine("Enter scaled amount:");
@@ -67,7 +73,9 @@ namespace BCA2_POE
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
-
+        /// <summary>
+        /// Returns the Receipe in a readable format to the console
+        /// </summary>
         private static void ViewReceipe()
         {
             Console.WriteLine("");
@@ -75,23 +83,26 @@ namespace BCA2_POE
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
-
+        /// <summary>
+        /// Entry of data required for the Receipe
+        /// </summary>
         private static void ReceipeEntry()
         {
             string sReceiptName = "";
             int iNumIngredients = 0;
             int iSteps = 0;
 
+            // Receipe Name
             Console.WriteLine("");
             Console.WriteLine("Enter the receipt name");
             sReceiptName = Console.ReadLine();
             rec.name = sReceiptName;
-
+            // Receipe Ingredients Amount
             Console.WriteLine("Enter the number of ingredients:");
             iNumIngredients = int.Parse(Console.ReadLine());
             rec.iNumIngredients = iNumIngredients;
 
-
+            // Ingredient Name, Amount, Measurement Entry
             for (int i = 0; i < iNumIngredients; i++)
             {
                 Console.WriteLine("\nIngredient: " + (i+1) + "\n");
@@ -105,18 +116,19 @@ namespace BCA2_POE
 
                 rec.ingredients.Add(ing);
             }
-
+            // Receipe Steps Amount
             Console.WriteLine("");
             Console.WriteLine("Enter number of steps");
             iSteps = int.Parse(Console.ReadLine());
             rec.iNumSteps = iSteps;
-
+            // Receipe Description Entry
             for (int i = 0; i < iSteps; i++)
             {
                 Console.WriteLine("\nStep: " + (i + 1) + "\n");
                 string s = Console.ReadLine();
                 rec.steps.Add(s);
             }
+            // Viewing of Receipe
             Console.WriteLine();
             Console.WriteLine(rec.toString());
         }

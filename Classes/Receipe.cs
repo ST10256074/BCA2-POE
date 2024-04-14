@@ -12,7 +12,9 @@ public class Receipe
     public ArrayList steps { get; set; }
 
     //------------------------------------------------------------------------------------------------------------------------//
-
+    /// <summary>
+    /// Public Constructor with initialization of variables
+    /// </summary>
     public Receipe()
     {
         ingredients = new ArrayList();
@@ -21,16 +23,20 @@ public class Receipe
     }
 
     //------------------------------------------------------------------------------------------------------------------------//
-
+    /// <summary>
+    /// To String Method that returns a human readable version of the Receipe
+    /// </summary>
+    /// <returns>string</returns>
     public string toString()
     {
+        // Top information string
         string s = "";
         s = s + "------------\n";
         s = s + "Receipe: " + name;
         s = s + "\n\nIngredients: ";
         s = s + "\nNo. Ingredients: " + iNumIngredients;
         
-
+        // List Ingredients
         for (int i = 0; i < ingredients.Count; i++)
         {
             Ingredient ins = (Ingredient) ingredients[i];
@@ -39,6 +45,7 @@ public class Receipe
         s = s + "\n\nSteps: ";
         s = s + "\nNo. Steps: " + iNumSteps;
 
+        // List Steps
         for (int i = 0; i < steps.Count; i++)
         {
             s = s +"\n"+ (i+1) + " : " + steps[i];

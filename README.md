@@ -8,6 +8,13 @@ Github Link: https://github.com/ST10256074/BCA2-POE
 ## About
 This program allows you to create and manage recipes with ingredients, quantities, units of measurement, and instructions (steps). It provides a human-readable string representation of the recipe for easy display or sharing.
 
+## References 
+
+JavaPoint. (2024, April 13). C# Oject and Class. Retrieved from JavaPoint: https://www.javatpoint.com/c-sharp-object-and-class
+Microsoft Learn. (2024, April 15). ArrayList Class. Retrieved from Microsoft Learn: https://learn.microsoft.com/en-us/dotnet/api/system.collections.arraylist?view=net-8.0
+Microsoft Learn. (2024, April 13). Run a C# program in Visual Studio. Retrieved from Microsoft Learn: https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/run-program?view=vs-2022
+W3 Schools. (2024, April 14). C# Tutorial. Retrieved from W3 Schools: https://www.w3schools.com/cs/index.php
+
 ## Prerequisites
 
 Visual Studio: A free or paid edition of Visual Studio must be used. 
@@ -17,7 +24,7 @@ Basic C# Knowledge: This is due to this running using an IDE and not an executab
 
 1. Clone the Repository 
     Using Git or Github you can clone the repo using the url
-2. Open the Project File (.sln) in Visual Studio
+2. Open the Project File (.sln) in Visual Studio (Microsoft Learn, 2024)
     Open a solution file or project file using visual studio
 3. Run the project 
     Using the green arrow at the top of the page.

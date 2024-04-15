@@ -7,6 +7,8 @@ namespace BCA2_POE
         // Declaring variables
         static Receipe rec = new Receipe();
         static Boolean bfirstReceipe = true;
+        // (JavaPoint, 2024)
+
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>

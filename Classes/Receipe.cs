@@ -9,7 +9,9 @@ public class Receipe
     public float fScale { get; set; }
 
     public ArrayList ingredients { get; set; }
+    // (Microsoft Learn, 2024)
     public ArrayList steps { get; set; }
+    // (Microsoft Learn, 2024)
 
     //------------------------------------------------------------------------------------------------------------------------//
     /// <summary>
@@ -20,6 +22,7 @@ public class Receipe
         ingredients = new ArrayList();
         steps = new ArrayList();
         fScale = 1;
+        // (JavaPoint, 2024)
     }
 
     //------------------------------------------------------------------------------------------------------------------------//

@@ -33,6 +33,7 @@ public class Receipe
         string s = "";
         s = s + "------------\n";
         s = s + "Receipe: " + name;
+        s = s + "\nScaling: " + fScale+ "x";
         s = s + "\n\nIngredients: ";
         s = s + "\nNo. Ingredients: " + iNumIngredients;
         

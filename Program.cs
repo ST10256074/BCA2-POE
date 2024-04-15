@@ -35,7 +35,20 @@ namespace BCA2_POE
             // User Choice Entry
             Console.WriteLine("");
             Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
-            int entry = int.Parse(Console.ReadLine());
+            int entry = 4;
+            while (true)
+            {
+                try
+                {
+                    entry = int.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Enter Valid Number");
+                }
+            }
+
             switch (entry)
             {
                 case 1:
@@ -104,10 +117,24 @@ namespace BCA2_POE
             Console.WriteLine("Enter the receipt name");
             sReceiptName = Console.ReadLine();
             rec.name = sReceiptName;
+
             // Receipe Ingredients Amount
-            Console.WriteLine("Enter the number of ingredients:");
-            iNumIngredients = int.Parse(Console.ReadLine());
+            // Exception Handeling for No. Ingredients
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter the number of ingredients:");
+                    iNumIngredients = int.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please Enter Valid Number");
+                }
+            }
             rec.iNumIngredients = iNumIngredients;
+
 
             // Ingredient Name, Amount, Measurement Entry
             for (int i = 0; i < iNumIngredients; i++)
@@ -116,18 +143,48 @@ namespace BCA2_POE
                 Ingredient ing = new Ingredient();
                 Console.WriteLine("Ingredient Name");
                 ing.name = Console.ReadLine();
-                Console.WriteLine("Ingredient Quantity");
-                ing.quantity = int.Parse(Console.ReadLine());
+
+                // Exception Handeling for Ingredient Quantity
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Ingredient Quantity");
+                        ing.quantity = int.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Enter Valid Quantity");
+                    }
+                }
+
+
                 Console.WriteLine("Ingredient Unit of Measurement");
                 ing.unitOfMeasurement = Console.ReadLine();
 
                 rec.ingredients.Add(ing);
             }
+
             // Receipe Steps Amount
             Console.WriteLine("");
-            Console.WriteLine("Enter number of steps");
-            iSteps = int.Parse(Console.ReadLine());
+
+            // Exception Handeling for No. Steps
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter number of steps");
+                    iSteps = int.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please enter a valid number");
+                }
+            }
             rec.iNumSteps = iSteps;
+
             // Receipe Description Entry
             for (int i = 0; i < iSteps; i++)
             {
@@ -135,6 +192,7 @@ namespace BCA2_POE
                 string s = Console.ReadLine();
                 rec.steps.Add(s);
             }
+
             // Viewing of Receipe
             Console.WriteLine();
             Console.WriteLine(rec.toString());

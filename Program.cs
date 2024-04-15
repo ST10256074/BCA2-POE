@@ -6,7 +6,7 @@ namespace BCA2_POE
     {
         // Declaring variables
         static Receipe rec = new Receipe();
-
+        static Boolean bfirstReceipe = true;
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>
@@ -32,7 +32,7 @@ namespace BCA2_POE
         /// </summary>
         static void View()
         {
-            // User Choice Entry
+            // User Choice Entry and exception handling
             Console.WriteLine("");
             Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
             int entry = 4;
@@ -45,10 +45,15 @@ namespace BCA2_POE
                 }
                 catch (Exception)
                 {
+                    // Red color for catched exceptions
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Enter Valid Number");
+                    Console.ForegroundColor = ConsoleColor.White;
+
                 }
             }
 
+            // User Entry switch case
             switch (entry)
             {
                 case 1:
@@ -77,12 +82,12 @@ namespace BCA2_POE
         {
             //User Entry
             Console.WriteLine("");
-            Console.WriteLine("Would you like to scale the receipe?");
+            Console.WriteLine("Would you like to scale the receipe? (Y/N)");
             string input = Console.ReadLine();
             //User choice 
             if (input.Contains("y") || input.Contains("Y"))
             {
-                Console.WriteLine("Enter scaled amount:");
+                Console.WriteLine("Enter scaled amount: \n(Receipe can be scaled back to default by inputting 1)\n");
                 float scalableAmount = float.Parse(Console.ReadLine());
                 rec.fScale = scalableAmount;
             }
@@ -109,6 +114,20 @@ namespace BCA2_POE
             int iNumIngredients = 0;
             int iSteps = 0;
 
+            // Check if there is a receipe stored already and then prompt for overwrite
+            if (bfirstReceipe==false)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Do you want to overwrite previous receipe? (Y/N)");
+                string input = Console.ReadLine();
+                if (input.Contains("n") || input.Contains("N"))
+                {
+                    return;
+                }
+                // User wants to overwrite receipe
+            }
+
+            bfirstReceipe = false;
             // Re initilize rec with new data
             rec = new Receipe();
 
@@ -130,7 +149,10 @@ namespace BCA2_POE
                 }
                 catch (Exception)
                 {
+                    // Red color for catched exceptions
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please Enter Valid Number");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
             rec.iNumIngredients = iNumIngredients;
@@ -155,7 +177,10 @@ namespace BCA2_POE
                     }
                     catch (Exception)
                     {
+                        // Red color for catched exceptions
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Enter Valid Quantity");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -180,7 +205,10 @@ namespace BCA2_POE
                 }
                 catch (Exception)
                 {
+                    // Red color for catched exceptions
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please enter a valid number");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
             rec.iNumSteps = iSteps;

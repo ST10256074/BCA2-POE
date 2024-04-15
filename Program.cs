@@ -9,7 +9,10 @@ namespace BCA2_POE
 
 
         //------------------------------------------------------------------------------------------------------------------------//
-
+        /// <summary>
+        /// Main Loop
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
 
@@ -29,6 +32,7 @@ namespace BCA2_POE
         /// </summary>
         static void View()
         {
+            // User Choice Entry
             Console.WriteLine("");
             Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
             int entry = int.Parse(Console.ReadLine());
@@ -91,6 +95,9 @@ namespace BCA2_POE
             string sReceiptName = "";
             int iNumIngredients = 0;
             int iSteps = 0;
+
+            // Re initilize rec with new data
+            rec = new Receipe();
 
             // Receipe Name
             Console.WriteLine("");

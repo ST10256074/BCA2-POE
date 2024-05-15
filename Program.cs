@@ -26,7 +26,6 @@ namespace BCA2_POE
                 View();
             }
 
-
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
@@ -72,7 +71,7 @@ namespace BCA2_POE
                     ViewAllRecipes();
                     break;
                 case 3:
-                    ViewSpecificRecipe();
+                    UserViewSpecificRecipe();
                     break;
                 case 4:
                     ModifySpecificRecipe();
@@ -107,6 +106,46 @@ namespace BCA2_POE
         }
 
         /// <summary>
+        /// Finds a recipe by prompting user 
+        /// </summary>
+        /// <returns>Recipe</returns>
+        private static Recipe UserFindRecipe()
+        {
+            Recipe r = null;
+            Console.WriteLine("Please enter Recipe name");
+            while (true)
+            {
+
+                string sinput = Console.ReadLine();
+                if (sinput.Length < 2)
+                {
+                    Console.WriteLine("Please enter a name longer than 2 characters");
+                    continue;
+                }
+                if (sinput is null)
+                {
+                    Console.WriteLine("Please enter a value");
+                    continue;
+                }
+                var temp = FindRecipe(sinput);
+                if (temp is null)
+                {
+                    Console.WriteLine("Recipe Not Found please try again");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("Recipe Found");
+                    r = temp;
+                    break;
+                }
+            }
+            return r;
+
+        }
+
+
+        /// <summary>
         /// Finds a recipe provided a string and returns the Recipe
         /// </summary>
         /// <param name="s"></param>
@@ -123,6 +162,37 @@ namespace BCA2_POE
             return null;
         }
 
+        /// <summary>
+        /// Handles the user for viewing a recipe
+        /// </summary>
+        private static void UserViewSpecificRecipe()
+        {
+            Recipe r = UserFindRecipe();
+            if (r is null)
+            {
+                return;
+            }
+            else
+            {
+                ViewSpecificRecipe(r);
+            }
+        }
+
+        /// <summary>
+        /// Handles the user for modifying a recipe
+        /// </summary>
+        private static void ModifySpecificRecipe()
+        {
+            Recipe r = UserFindRecipe();
+            if (r is null)
+            {
+                return;
+            }
+            else
+            {
+                ModifySpecificRecipe(r);
+            }
+        }
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>

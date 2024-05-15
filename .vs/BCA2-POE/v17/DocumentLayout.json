@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\classes\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|solutionrelative:classes\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|c:\\users\\jweha\\onedrive - advtech ltd\\bca2\\prog 1\\bca2-poe\\classes\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|solutionrelative:classes\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\classes\\receipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|solutionrelative:classes\\receipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\classes\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1390F4C9-9FFE-4F00-A5D1-03DB9D2EB826}|BCA2-POE.csproj|solutionrelative:classes\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,27 +42,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Ingredient.cs",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Ingredient.cs",
               "RelativeDocumentMoniker": "Classes\\Ingredient.cs",
               "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Ingredient.cs",
               "RelativeToolTip": "Classes\\Ingredient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T12:07:12.672Z"
+              "WhenOpened": "2024-04-10T12:07:12.672Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Receipe.cs",
-              "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Receipe.cs",
-              "RelativeDocumentMoniker": "Classes\\Receipe.cs",
-              "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Receipe.cs",
-              "RelativeToolTip": "Classes\\Receipe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAbAAAA",
+              "DocumentIndex": 1,
+              "Title": "Recipe.cs",
+              "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Recipe.cs",
+              "RelativeDocumentMoniker": "Classes\\Recipe.cs",
+              "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Classes\\Recipe.cs",
+              "RelativeToolTip": "Classes\\Recipe.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwDoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-10T12:07:10.591Z"
+              "WhenOpened": "2024-04-10T12:07:10.591Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +74,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAowAkAAAAcAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAEwCcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T11:22:08.982Z",
               "EditorCaption": ""

@@ -37,7 +37,7 @@ namespace BCA2_POE
         {
             // User Choice Entry and exception handling
             Console.WriteLine("");
-//            Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
+            //Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
             Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Specific Recipe\n3. Modify Specific Recipe\n4. Exit Application");
             int entry = 4;
             while (true)
@@ -113,7 +113,7 @@ namespace BCA2_POE
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>
-        /// Returns the Recipe in a readable format to the console
+        /// Returns the Recipe in a readable format to the console 
         /// </summary>
         private static void ViewRecipe(Recipe r)
         {

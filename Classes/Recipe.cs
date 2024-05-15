@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 
 public class Recipe
 {
@@ -8,7 +9,7 @@ public class Recipe
     public int iNumSteps { get; set; }
     public float fScale { get; set; }
 
-    public ArrayList ingredients { get; set; }
+    public List<Ingredient> ingredients { get; set; }
     // (Microsoft Learn, 2024)
     public ArrayList steps { get; set; }
     // (Microsoft Learn, 2024)
@@ -19,7 +20,6 @@ public class Recipe
     /// </summary>
     public Recipe()
     {
-        ingredients = new ArrayList();
         steps = new ArrayList();
         fScale = 1;
         // (JavaPoint, 2024)
@@ -44,8 +44,10 @@ public class Recipe
         for (int i = 0; i < ingredients.Count; i++)
         {
             Ingredient ins = (Ingredient) ingredients[i];
-            s = s + "\n"+ (i+1) +" : "+ ins.name + " " + (ins.quantity * fScale ) +" "+ ins.unitOfMeasurement;
+            s = s + "\n"+ (i+1) +" : "+ ins.name +"("+ins.foodGroup+")"+ " " + (ins.quantity * fScale ) +" "+ ins.unitOfMeasurement;
         }
+        // Checking for excess calories
+        s = s + "\n" + checkCalorie();
         s = s + "\n\nSteps: ";
         s = s + "\nNo. Steps: " + iNumSteps;
 
@@ -56,6 +58,28 @@ public class Recipe
         }
         s = s + "\n------------";
         return s;
+    }
+
+    /// <summary>
+    /// Goes through all the ingredients and calculates the total number of calories present and if 
+    /// exceeds 300, warns user. 
+    /// </summary>
+    /// <returns>string</returns>
+    public string checkCalorie()
+    {
+        float total = 0;
+        for (int i = 0; i < ingredients.Count; i++)
+        {
+            total += ingredients[i].calories;
+        }
+        if (total>=300.0)
+        {
+            return "Recipe contains 300+ calories";
+        }
+        else
+        {
+            return "Recipe contains sub 300 calories";
+        }
     }
 }
 

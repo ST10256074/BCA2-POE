@@ -1,7 +1,7 @@
 # BCA2-POE Assignment Part 1
 # ST10256074 James Hart
 
-# Receipe Manager Part 1
+# Recipe Manager Part 1
 
 Github Link: https://github.com/ST10256074/BCA2-POE
 
@@ -31,12 +31,12 @@ Basic C# Knowledge: This is due to this running using an IDE and not an executab
 
 ## User Interaction Chain
 
-1. User is prompted with a list of commands the receipe application can do
-2. User can choose between (New Receipe, View Receipe, Modify Receipe, Exit Application)
-3. User creates new Receipe creates a new Receipe that is held in memory
-4. User can scale the Receipe using "Modify Receipe" method.
-5. User can view updated receipe using "View Receipe"
-6. User can overwrite exsisting receipe by using "New Receipe"
+1. User is prompted with a list of commands the Recipe application can do
+2. User can choose between (New Recipe, View Recipe, Modify Recipe, Exit Application)
+3. User creates new Recipe creates a new Recipe that is held in memory
+4. User can scale the Recipe using "Modify Recipe" method.
+5. User can view updated Recipe using "View Recipe"
+6. User can overwrite exsisting Recipe by using "New Recipe"
 7. User can exit application using "Exit Application"
 
 ## Classes:
@@ -45,13 +45,13 @@ Basic C# Knowledge: This is due to this running using an IDE and not an executab
 This is the main file of the program with a main loop for user interactions.
 It handles all the user inputs and console outputs effectively.
 
-### Receipe Class:
+### Recipe Class:
 
 This class represents the recipe and its variables:
 name: The name of the recipe.
 iNumIngredients: The number of ingredients.
 iNumSteps: The number of steps in the recipe.
-fScale: A scaling factor to adjust the quantity of ingredients for more makings of the receipe.
+fScale: A scaling factor to adjust the quantity of ingredients for more makings of the Recipe.
 ingredients: An ArrayList to store Ingredient objects of its respective class.
 steps: An ArrayList to store the recipe's instructions.
 
@@ -59,7 +59,7 @@ toString() Method: This method formats the recipe information into a human-reada
 
 ### Ingredient Class:
 
-This class represents the ingredients required for the receipe:
+This class represents the ingredients required for the Recipe:
 name: Name of the ingredient.
 quantity: Quantity of the ingredient
 unitOfMeasurement: The unit of measurement

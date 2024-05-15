@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BCA2_POE
 {
     internal class Program
     {
         // Declaring variables
-        static Receipe rec = new Receipe();
-        static Boolean bfirstReceipe = true;
+        static List<Recipe> recipes = new List<Recipe>();
+        static Boolean bfirstRecipe = true;
         // (JavaPoint, 2024)
 
 
@@ -18,7 +19,7 @@ namespace BCA2_POE
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Welcome to the Receipe Console Application");
+            Console.WriteLine("Welcome to the Recipe Console Application");
             // Main Loop
             while (true)
             {
@@ -36,7 +37,8 @@ namespace BCA2_POE
         {
             // User Choice Entry and exception handling
             Console.WriteLine("");
-            Console.WriteLine("Would you like to:\n1. Create Receipe\n2. View Receipe\n3. Modify Receipe\n4. Exit Application");
+//            Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
+            Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Specific Recipe\n3. Modify Specific Recipe\n4. Exit Application");
             int entry = 4;
             while (true)
             {
@@ -59,13 +61,13 @@ namespace BCA2_POE
             switch (entry)
             {
                 case 1:
-                    ReceipeEntry();
+                    RecipeEntry();
                     break;
                 case 2:
-                    ViewReceipe();
+                    ViewRecipe();
                     break;
                 case 3:
-                    ModifyReceipe();
+                    ModifyRecipe();
                     break;
                 case 4:
                     System.Environment.Exit(0);
@@ -78,68 +80,82 @@ namespace BCA2_POE
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>
-        /// Allows the modification of the receipe by scaling the amounts required for the Receipe
+        /// Allows the modification of the Recipe by scaling the amounts required for the Recipe
         /// </summary>
-        private static void ModifyReceipe()
+        private static void ModifyRecipe(Recipe r)
         {
             //User Entry
             Console.WriteLine("");
-            Console.WriteLine("Would you like to scale the receipe? (Y/N)");
+            Console.WriteLine("Would you like to scale the Recipe? (Y/N)");
             string input = Console.ReadLine();
             //User choice 
             if (input.Contains("y") || input.Contains("Y"))
             {
-                Console.WriteLine("Enter scaled amount: \n(Receipe can be scaled back to default by inputting 1)\n");
+                Console.WriteLine("Enter scaled amount: \n(Recipe can be scaled back to default by inputting 1)\n");
                 float scalableAmount = float.Parse(Console.ReadLine());
-                rec.fScale = scalableAmount;
+                r.fScale = scalableAmount;
             }
-            ViewReceipe();
+            ViewRecipe(r);
         }
+
+        private static Recipe FindRecipe(String s)
+        {
+            for (int i = 0; i < recipes.Count; i++)
+            {
+                if (s.Contains(recipes[i].name))
+                {
+                    return recipes[i];
+                }
+            }
+            return null;
+        }
+
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>
-        /// Returns the Receipe in a readable format to the console
+        /// Returns the Recipe in a readable format to the console
         /// </summary>
-        private static void ViewReceipe()
+        private static void ViewRecipe(Recipe r)
         {
             Console.WriteLine("");
-            Console.WriteLine(rec.toString());
+            Console.WriteLine(r.toString());
         }
 
         //------------------------------------------------------------------------------------------------------------------------//
         /// <summary>
-        /// Entry of data required for the Receipe
+        /// Entry of data required for the Recipe
         /// </summary>
-        private static void ReceipeEntry()
+        private static void RecipeEntry()
         {
+            Recipe rec = new Recipe();
             string sReceiptName = "";
             int iNumIngredients = 0;
             int iSteps = 0;
 
-            // Check if there is a receipe stored already and then prompt for overwrite
-            if (bfirstReceipe==false)
+            // Check if there is a Recipe stored already and then prompt for overwrite
+            if (bfirstRecipe == false)
             {
                 Console.WriteLine("");
-                Console.WriteLine("Do you want to overwrite previous receipe? (Y/N)");
+                Console.WriteLine("Do you want to overwrite previous Recipe? (Y/N)");
                 string input = Console.ReadLine();
                 if (input.Contains("n") || input.Contains("N"))
                 {
                     return;
                 }
-                // User wants to overwrite receipe
+                // User wants to overwrite Recipe
             }
 
-            bfirstReceipe = false;
+            bfirstRecipe = false;
             // Re initilize rec with new data
-            rec = new Receipe();
+            rec = new Recipe();
 
-            // Receipe Name
+            // Recipe Name
             Console.WriteLine("");
             Console.WriteLine("Enter the receipt name");
             sReceiptName = Console.ReadLine();
             rec.name = sReceiptName;
 
-            // Receipe Ingredients Amount
+            // Recipe Ingredients Amount
             // Exception Handeling for No. Ingredients
             while (true)
             {
@@ -163,7 +179,7 @@ namespace BCA2_POE
             // Ingredient Name, Amount, Measurement Entry
             for (int i = 0; i < iNumIngredients; i++)
             {
-                Console.WriteLine("\nIngredient: " + (i+1) + "\n");
+                Console.WriteLine("\nIngredient: " + (i + 1) + "\n");
                 Ingredient ing = new Ingredient();
                 Console.WriteLine("Ingredient Name");
                 ing.name = Console.ReadLine();
@@ -193,7 +209,7 @@ namespace BCA2_POE
                 rec.ingredients.Add(ing);
             }
 
-            // Receipe Steps Amount
+            // Recipe Steps Amount
             Console.WriteLine("");
 
             // Exception Handeling for No. Steps
@@ -215,7 +231,7 @@ namespace BCA2_POE
             }
             rec.iNumSteps = iSteps;
 
-            // Receipe Description Entry
+            // Recipe Description Entry
             for (int i = 0; i < iSteps; i++)
             {
                 Console.WriteLine("\nStep: " + (i + 1) + "\n");
@@ -223,9 +239,12 @@ namespace BCA2_POE
                 rec.steps.Add(s);
             }
 
-            // Viewing of Receipe
+            // Viewing of Recipe
             Console.WriteLine();
             Console.WriteLine(rec.toString());
+
+            //Add Recipe to List
+            recipes.Add(rec);
         }
     }
 

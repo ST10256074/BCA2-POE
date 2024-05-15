@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-public class Receipe
+public class Recipe
 {
     // Declaring variables
     public string name { get; set; }
@@ -17,7 +17,7 @@ public class Receipe
     /// <summary>
     /// Public Constructor with initialization of variables
     /// </summary>
-    public Receipe()
+    public Recipe()
     {
         ingredients = new ArrayList();
         steps = new ArrayList();
@@ -27,7 +27,7 @@ public class Receipe
 
     //------------------------------------------------------------------------------------------------------------------------//
     /// <summary>
-    /// To String Method that returns a human readable version of the Receipe
+    /// To String Method that returns a human readable version of the Recipe
     /// </summary>
     /// <returns>string</returns>
     public string toString()
@@ -35,7 +35,7 @@ public class Receipe
         // Top information string
         string s = "";
         s = s + "------------\n";
-        s = s + "Receipe: " + name;
+        s = s + "Recipe: " + name;
         s = s + "\nScaling: " + fScale+ "x";
         s = s + "\n\nIngredients: ";
         s = s + "\nNo. Ingredients: " + iNumIngredients;

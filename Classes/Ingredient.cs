@@ -5,6 +5,8 @@ public class Ingredient
     // Declaring variables
     public string name { get; set; }
     public float quantity { get; set; }
+    public float calories { get; set; }
+    public string foodGroup { get; set; }
     public string unitOfMeasurement { get; set; }
     public Ingredient()
 	{

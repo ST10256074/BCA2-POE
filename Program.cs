@@ -38,7 +38,12 @@ namespace BCA2_POE
             // User Choice Entry and exception handling
             Console.WriteLine("");
             //Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
-            Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Specific Recipe\n3. Modify Specific Recipe\n4. Exit Application");
+            Console.WriteLine(@"Would you like to:
+1. Create Recipe
+2. View All Recipes
+3. View Specific Recipe
+4. Modify Specific Recipe
+5. Exit Application");
             int entry = 4;
             while (true)
             {
@@ -64,12 +69,15 @@ namespace BCA2_POE
                     RecipeEntry();
                     break;
                 case 2:
-                    ViewRecipe();
+                    ViewAllRecipes();
                     break;
                 case 3:
-                    ModifyRecipe();
+                    ViewSpecificRecipe();
                     break;
                 case 4:
+                    ModifySpecificRecipe();
+                    break;
+                case 5:
                     System.Environment.Exit(0);
                     break;
                 default:
@@ -82,7 +90,7 @@ namespace BCA2_POE
         /// <summary>
         /// Allows the modification of the Recipe by scaling the amounts required for the Recipe
         /// </summary>
-        private static void ModifyRecipe(Recipe r)
+        private static void ModifySpecificRecipe(Recipe r)
         {
             //User Entry
             Console.WriteLine("");
@@ -95,9 +103,14 @@ namespace BCA2_POE
                 float scalableAmount = float.Parse(Console.ReadLine());
                 r.fScale = scalableAmount;
             }
-            ViewRecipe(r);
+            ViewSpecificRecipe(r);
         }
 
+        /// <summary>
+        /// Finds a recipe provided a string and returns the Recipe
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>Recipe</returns>
         private static Recipe FindRecipe(String s)
         {
             for (int i = 0; i < recipes.Count; i++)
@@ -115,10 +128,21 @@ namespace BCA2_POE
         /// <summary>
         /// Returns the Recipe in a readable format to the console 
         /// </summary>
-        private static void ViewRecipe(Recipe r)
+        private static void ViewSpecificRecipe(Recipe r)
         {
             Console.WriteLine("");
             Console.WriteLine(r.toString());
+        }
+
+        /// <summary>
+        /// Prints out all the recipes 
+        /// </summary>
+        private static void ViewAllRecipes()
+        {
+            for (int i = 0; i < recipes.Count; i++)
+            {
+                Console.WriteLine(recipes[i].toString());
+            }
         }
 
         //------------------------------------------------------------------------------------------------------------------------//

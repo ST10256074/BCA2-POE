@@ -226,19 +226,6 @@ namespace BCA2_POE
             int iNumIngredients = 0;
             int iSteps = 0;
 
-            // Check if there is a Recipe stored already and then prompt for overwrite
-            if (bfirstRecipe == false)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Do you want to overwrite previous Recipe? (Y/N)");
-                string input = Console.ReadLine();
-                if (input.Contains("n") || input.Contains("N"))
-                {
-                    return;
-                }
-                // User wants to overwrite Recipe
-            }
-
             bfirstRecipe = false;
             // Re initilize rec with new data
             rec = new Recipe();
@@ -275,8 +262,70 @@ namespace BCA2_POE
             {
                 Console.WriteLine("\nIngredient: " + (i + 1) + "\n");
                 Ingredient ing = new Ingredient();
-                Console.WriteLine("Ingredient Name");
-                ing.name = Console.ReadLine();
+
+                // Exception Handling for Ingredient Name
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Ingredient Name");
+                        ing.name = Console.ReadLine();
+                        if (ing.name.Length < 2)
+                        {
+                            Console.WriteLine("Please enter a name longer than 2 characters");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        // Red color for catched exceptions
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Enter Valid Name");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
+
+                // Exception Handling for Ingredient Food Group
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Ingredient Food Group");
+                        ing.foodGroup = Console.ReadLine();
+                        if (ing.foodGroup.Length < 2)
+                        {
+                            Console.WriteLine("Please enter a food group longer than 2 characters");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        // Red color for catched exceptions
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Enter Valid Food Group");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
+
+                // Exception Handeling for Ingredient Calories
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Ingredient Calories");
+                        ing.calories = float.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        // Red color for catched exceptions
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Enter Valid Calories");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
 
                 // Exception Handeling for Ingredient Quantity
                 while (true)
@@ -296,9 +345,28 @@ namespace BCA2_POE
                     }
                 }
 
-
-                Console.WriteLine("Ingredient Unit of Measurement");
-                ing.unitOfMeasurement = Console.ReadLine();
+                // Exception Handeling for Ingredient Unit of Measurement
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Ingredient Unit of Measurement");
+                        ing.unitOfMeasurement = Console.ReadLine();
+                        if (ing.unitOfMeasurement.Length ==0)
+                        {
+                            Console.WriteLine("Please enter a unit of measurement");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (Exception)
+                    {
+                        // Red color for catched exceptions
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Enter Valid Unit of Measurement");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                }
 
                 rec.ingredients.Add(ing);
             }

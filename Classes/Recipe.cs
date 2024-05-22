@@ -21,6 +21,7 @@ public class Recipe
     public Recipe()
     {
         steps = new ArrayList();
+        ingredients = new List<Ingredient>();
         fScale = 1;
         // (JavaPoint, 2024)
     }
@@ -44,7 +45,7 @@ public class Recipe
         for (int i = 0; i < ingredients.Count; i++)
         {
             Ingredient ins = (Ingredient) ingredients[i];
-            s = s + "\n"+ (i+1) +" : "+ ins.name +"("+ins.foodGroup+")"+ " " + (ins.quantity * fScale ) +" "+ ins.unitOfMeasurement;
+            s = s + "\n"+ (i+1) +" : "+ ins.name +" ("+ins.foodGroup+")"+ " " + (ins.quantity * fScale ) +" "+ ins.unitOfMeasurement;
         }
         // Checking for excess calories
         s = s + "\n" + checkCalorie();

@@ -38,8 +38,8 @@ namespace BCA2_POE
             Console.WriteLine("");
             //Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
             Console.WriteLine(@"Would you like to:
-1. Create Recipe
-2. View All Recipes
+1. Create/Add new Recipe
+2. View All Recipes (a-z)
 3. View Specific Recipe
 4. Modify Specific Recipe
 5. Exit Application");
@@ -60,7 +60,8 @@ namespace BCA2_POE
 
                 }
             }
-
+            // New line
+            Console.WriteLine("");
             // User Entry switch case
             switch (entry)
             {
@@ -154,6 +155,7 @@ namespace BCA2_POE
         {
             for (int i = 0; i < recipes.Count; i++)
             {
+                // Search through recipes for the recpie name that matches the string s
                 if (s.Contains(recipes[i].name))
                 {
                     return recipes[i];
@@ -209,8 +211,19 @@ namespace BCA2_POE
         /// </summary>
         private static void ViewAllRecipes()
         {
+            // Sort recipes into alphabetical order
+            recipes.Sort((x, y) => string.Compare(x.name, y.name));
+            
+            Random rnd = new Random();
+            // View all recipes in order 
             for (int i = 0; i < recipes.Count; i++)
             {
+                // Random Color to differentiate between recipes
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("------------");
+                Console.ForegroundColor = ConsoleColor.White;
+
                 Console.WriteLine(recipes[i].toString());
             }
         }

@@ -39,7 +39,8 @@ namespace BCA2_POE
             // User Choice Entry and exception handling
             Console.WriteLine("");
             //Console.WriteLine("Would you like to:\n1. Create Recipe\n2. View Recipe\n3. Modify Recipe\n4. Exit Application");
-            Console.WriteLine(@"Would you like to:
+            Console.WriteLine("Would you like to:");
+            Console.WriteLine(@"
 1. Create/Add new Recipe
 2. View All Recipes (a-z)
 3. View Specific Recipe
@@ -331,11 +332,56 @@ namespace BCA2_POE
                 {
                     try
                     {
-                        Console.WriteLine("Ingredient Food Group");
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Ingredient Food Group:");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        // Explanation of Food Groups
+                        Console.WriteLine("Food groups are categories of foods that help us understand how different types of foods contribute to our health");
+                        // Food Group Choices
+                        Console.WriteLine("Food Groups: \n1. Dairy\n2. Protein\n3. Fruit\n4. Vegetable\n5. Grain\n6. Sweets\n7. Fats\n8. Other");
+                        
                         ing.foodGroup = Console.ReadLine();
+
+                        // Switch case for food groups
+                        switch (ing.foodGroup)
+                        {
+                            case "1":
+                                ing.foodGroup = "Dairy";
+                                break;
+                            case "2":
+                                ing.foodGroup = "Protein";
+                                break;
+                            case "3":
+                                ing.foodGroup = "Fruit";
+                                break;
+                            case "4":
+                                ing.foodGroup = "Vegetable";
+                                break;
+                            case "5":
+                                ing.foodGroup = "Grain";
+                                break;
+                            case "6":
+                                ing.foodGroup = "Sweets";
+                                break;
+                            case "7":
+                                ing.foodGroup = "Fats";
+                                break;
+                            case "8":
+                                ing.foodGroup = "Other";
+                                break;
+                            default:
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Please enter a valid food group");
+                                Console.ForegroundColor = ConsoleColor.White;
+                                continue;
+                        }
+
                         if (ing.foodGroup.Length < 2)
                         {
-                            Console.WriteLine("Please enter a food group longer than 2 characters");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Please enter a valid food group");
+                            Console.ForegroundColor = ConsoleColor.White;
                             continue;
                         }
                         break;
@@ -354,7 +400,10 @@ namespace BCA2_POE
                 {
                     try
                     {
-                        Console.WriteLine("Ingredient Calories");
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Ingredient Calorie Amount");
+                        Console.ForegroundColor = ConsoleColor.White;
                         ing.calories = float.Parse(Console.ReadLine());
                         break;
                     }
@@ -372,7 +421,10 @@ namespace BCA2_POE
                 {
                     try
                     {
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Quantity");
+                        Console.ForegroundColor = ConsoleColor.White;
                         ing.quantity = int.Parse(Console.ReadLine());
                         break;
                     }
@@ -390,7 +442,10 @@ namespace BCA2_POE
                 {
                     try
                     {
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Unit of Measurement");
+                        Console.ForegroundColor = ConsoleColor.White;
                         ing.unitOfMeasurement = Console.ReadLine();
                         if (ing.unitOfMeasurement.Length ==0)
                         {

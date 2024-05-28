@@ -12,6 +12,16 @@ public class Ingredient
 	{
         // (JavaPoint, 2024)
     }
+
+    public Ingredient(string name,float quantity,float calories,string foodGroup,string unitOfMeasurement)
+    {
+        // (JavaPoint, 2024)
+        this.name = name;
+        this.quantity = quantity;
+        this.calories = calories;
+        this.foodGroup = foodGroup;
+        this.unitOfMeasurement = unitOfMeasurement;
+    }
 }
 
 //------------------------------------------...ooo000 END OF FILE 000ooo...------------------------------------------------------//

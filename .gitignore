@@ -1,2 +1,14 @@
 .vsidx
 *.vsidx
+/packages
+/TestProject1/obj
+/TestProject2
+/UnitTestProject1/bin/Debug
+/UnitTestProject1/obj/Debug
+/UnitTestProject1/Properties
+/.vs/BCA2-POE/v17/TestStore/0
+/.vs/BCA2-POE/v17/.futdcache.v2
+/bin/Debug/BCA2-POE.exe
+/bin/Debug/BCA2-POE.pdb
+/obj/Debug/BCA2-POE.exe
+/obj/Debug/BCA2-POE.pdb

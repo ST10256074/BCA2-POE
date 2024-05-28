@@ -18,8 +18,10 @@ namespace BCA2_POE
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Welcome to the Recipe Console Application");
+            Console.ForegroundColor = ConsoleColor.White;
+
             // Main Loop
             while (true)
             {
@@ -245,8 +247,28 @@ namespace BCA2_POE
 
             // Recipe Name
             Console.WriteLine("");
-            Console.WriteLine("Enter the receipt name");
-            sReceiptName = Console.ReadLine();
+            // Exception Handeling for Recipe Name
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Enter the receipt name");
+                    sReceiptName = Console.ReadLine();
+                    if (sReceiptName.Length < 2)
+                    {
+                        Console.WriteLine("Please enter a name longer than 2 characters");
+                        continue;
+                    }
+                    break;
+                }
+                catch (Exception)
+                {
+                    // Red color for catched exceptions
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please Enter Valid Name");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
             rec.name = sReceiptName;
 
             // Recipe Ingredients Amount
@@ -257,6 +279,11 @@ namespace BCA2_POE
                 {
                     Console.WriteLine("Enter the number of ingredients:");
                     iNumIngredients = int.Parse(Console.ReadLine());
+                    if (iNumIngredients < 1)
+                    {
+                        Console.WriteLine("Please enter a number greater than 0");
+                        continue;
+                    }
                     break;
                 }
                 catch (Exception)
@@ -394,6 +421,11 @@ namespace BCA2_POE
                 {
                     Console.WriteLine("Enter number of steps");
                     iSteps = int.Parse(Console.ReadLine());
+                    if (iSteps < 1)
+                    {
+                        Console.WriteLine("Please enter a number greater than 0");
+                        continue;
+                    }
                     break;
                 }
                 catch (Exception)

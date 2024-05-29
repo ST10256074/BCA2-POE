@@ -403,6 +403,8 @@ namespace BCA2_POE
                         Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Calorie Amount");
+                        // Print to console the description of calories
+                        Console.WriteLine("Calories represent the amount of energy released when our bodies metabolize nutrients");
                         Console.ForegroundColor = ConsoleColor.White;
                         ing.calories = float.Parse(Console.ReadLine());
                         break;

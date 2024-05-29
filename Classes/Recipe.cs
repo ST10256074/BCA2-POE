@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Recipe
@@ -11,7 +12,7 @@ public class Recipe
 
     public List<Ingredient> ingredients { get; set; }
     // (Microsoft Learn, 2024)
-    public ArrayList steps { get; set; }
+    public List<string> steps { get; set; }
     // (Microsoft Learn, 2024)
 
     public delegate string DelegateMethod(float total);
@@ -22,7 +23,7 @@ public class Recipe
     /// </summary>
     public Recipe()
     {
-        steps = new ArrayList();
+        steps = new List<string>();
         ingredients = new List<Ingredient>();
         fScale = 1;
         // (JavaPoint, 2024)
@@ -83,7 +84,11 @@ public class Recipe
 
         DelegateMethod DelegateMethod = new DelegateMethod(CalcCalories);
 
-        a.Add(DelegateMethod(total));
+        string calorie_ranges ="\n"+ @"Calorie Ranges:"+"\n"+ @"Low: Typically under 300 calories per serving.
+Moderate: Ranging from 300 to 600 calories per serving.
+High: Above 600 calories per serving."+"\n";
+
+        a.Add(calorie_ranges + DelegateMethod(total));
         a.Add(total);
         return a;
 

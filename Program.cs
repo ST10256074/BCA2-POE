@@ -9,7 +9,6 @@ namespace BCA2_POE
     {
         // Declaring variables
         static List<Recipe> recipes = new List<Recipe>();
-        static Boolean bfirstRecipe = true;
         // (JavaPoint, 2024)
 
 
@@ -244,7 +243,6 @@ namespace BCA2_POE
             int iNumIngredients = 0;
             int iSteps = 0;
 
-            bfirstRecipe = false;
             // Re initilize rec with new data
             rec = new Recipe();
 

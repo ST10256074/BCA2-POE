@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 // James Hart ST10256074
 
@@ -85,9 +84,9 @@ public class Recipe
 
         DelegateMethod DelegateMethod = new DelegateMethod(CalcCalories);
 
-        string calorie_ranges ="\n"+ @"Calorie Ranges:"+"\n"+ @"Low: Typically under 300 calories per serving.
+        string calorie_ranges = "\n" + @"Calorie Ranges:" + "\n" + @"Low: Typically under 300 calories per serving.
 Moderate: Ranging from 300 to 600 calories per serving.
-High: Above 600 calories per serving."+"\n";
+High: Above 600 calories per serving." + "\n";
 
         a.Add(calorie_ranges + DelegateMethod(total));
         a.Add(total);

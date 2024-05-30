@@ -121,7 +121,7 @@ namespace BCA2_POE
             Console.WriteLine("Please enter Recipe name");
             while (true)
             {
-
+                // User Entry
                 string sinput = Console.ReadLine();
                 if (sinput.Length < 2)
                 {
@@ -402,6 +402,7 @@ namespace BCA2_POE
                 {
                     try
                     {
+                        // User Entry for Calories
                         Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Calorie Amount");
@@ -425,6 +426,7 @@ namespace BCA2_POE
                 {
                     try
                     {
+                        // User Entry for Quantity
                         Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Quantity");
@@ -446,11 +448,13 @@ namespace BCA2_POE
                 {
                     try
                     {
+                        // User Entry for Unit of Measurement
                         Console.WriteLine("");
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine("Ingredient Unit of Measurement");
                         Console.ForegroundColor = ConsoleColor.White;
                         ing.unitOfMeasurement = Console.ReadLine();
+                        // Check if the unit of measurement is empty
                         if (ing.unitOfMeasurement.Length ==0)
                         {
                             Console.WriteLine("Please enter a unit of measurement");
@@ -478,6 +482,7 @@ namespace BCA2_POE
             {
                 try
                 {
+                    // User Entry for steps
                     Console.WriteLine("Enter number of steps");
                     iSteps = int.Parse(Console.ReadLine());
                     if (iSteps < 1)

@@ -52,6 +52,7 @@ public class Recipe
         }
         // Checking for excess calories
         s = s + "\n" + checkCalorie()[0];
+        s = s + "\nTotal Calories: " + checkCalorie()[1];
         s = s + "\n\nSteps: ";
         s = s + "\nNo. Steps: " + iNumSteps;
 

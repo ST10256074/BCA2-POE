@@ -11,7 +11,7 @@
             <RowDefinition Height="209*"/>
             <RowDefinition Height="225*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="Title" Content="Recipe Name" Margin="150,29,150,0" VerticalAlignment="Top" Height="50" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="Title" Content="Recipe Name" Margin="20,24,280,0" VerticalAlignment="Top" Height="50" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <RichTextBox x:Name="steps" Margin="320,144,20,130" Grid.RowSpan="2">
             <FlowDocument>
                 <Paragraph>
@@ -20,8 +20,16 @@
             </FlowDocument>
         </RichTextBox>
         <Button Content="Back" Margin="10,190,540,10" Grid.Row="1" Click="Button_Click"/>
-        <Label x:Name="lSteps" Content="Steps" Margin="400,105,140,69"/>
-        <Label x:Name="lCalories" Content="Calories" Margin="160,105,400,65"/>
+        <Label x:Name="lSteps" Content="Steps" Margin="480,24,60,149"/>
+        <Label x:Name="lCalories" Content="Calories" Margin="380,24,180,146"/>
+        <RichTextBox x:Name="rIngredients" Margin="20,144,340,130" Grid.RowSpan="2">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="CalorieWarning" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="340" Height="29"/>
 
     </Grid>
 </Window>

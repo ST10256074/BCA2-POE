@@ -23,6 +23,12 @@ public class Ingredient
         this.foodGroup = foodGroup;
         this.unitOfMeasurement = unitOfMeasurement;
     }
+
+    public override string ToString()
+    {
+        return name +"("+foodGroup+")"+ "\t" + quantity + unitOfMeasurement +"\t"+calories+"cal" ;
+    }
+
 }
 
 //------------------------------------------...ooo000 END OF FILE 000ooo...------------------------------------------------------//

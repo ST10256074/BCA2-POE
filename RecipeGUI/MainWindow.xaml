@@ -1,0 +1,90 @@
+﻿<Window x:Class="RecipeGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="565"
+        SizeToContent="WidthAndHeight" Loaded="Window_Loaded">
+    <Grid x:Name="MyGrid" Margin="0,0,-220,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="14*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Title" Content="Recipe Manager" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Height="80" Width="340" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Grid Margin="60,204,45,94" Background="#FFB7B7B7"/>
+        <Button x:Name="bSort_Asc" Content="Sort Asc" Margin="79,163,366,251" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="bSort_Desc" Content="Sort Desc" Margin="180,163,265,251" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Image x:Name="Image" Margin="440,22,70,294" Grid.ColumnSpan="2"/>
+        <Button x:Name="bView_Recipe" Content="View Recipe" Margin="66,348,361,52" RenderTransformOrigin="0.5,0.5" Click="bView_Recipe_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="bCreate_Menu" Content="Create Menu" Margin="376,157,50,248" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="bCreate_Recipe" Content="Create Recipe" Margin="175,350,250,50" RenderTransformOrigin="0.5,0.5" Click="bCreate_Recipe_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="bRemove_Recipe" Content="Remote Recipe" Margin="302,351,125,49" RenderTransformOrigin="0.5,0.5" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ListBox x:Name="gRecipes" Margin="60,204,45,94" ItemsSource="{Binding Recipes}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+            <Button Content="Update" HorizontalAlignment="Left" Margin="175,394,0,0" VerticalAlignment="Top" Click="Button_Click_1" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
+

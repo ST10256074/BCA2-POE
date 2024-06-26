@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BCA2-POE", "BCA2-POE.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{6B7706B5-CC0B-4946-ACF8-2DC904A5FC11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeGUI", "RecipeGUI\RecipeGUI.csproj", "{F939AE6D-3F77-4624-92B0-1388612F60DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6B7706B5-CC0B-4946-ACF8-2DC904A5FC11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B7706B5-CC0B-4946-ACF8-2DC904A5FC11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B7706B5-CC0B-4946-ACF8-2DC904A5FC11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F939AE6D-3F77-4624-92B0-1388612F60DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F939AE6D-3F77-4624-92B0-1388612F60DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F939AE6D-3F77-4624-92B0-1388612F60DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F939AE6D-3F77-4624-92B0-1388612F60DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 // James Hart ST10256074
 
-public class Recipe
+public class Recipe : INotifyPropertyChanged
 {
+
+    // ListBox names
+    private string _title;
+    public string Title
+    {
+        get { return _title; }
+        set
+        {
+            if (_title != value)
+            {
+                _title = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Title)));
+            }
+        }
+    }
+    public event PropertyChangedEventHandler PropertyChanged;
+
     // Declaring variables
     public string name { get; set; }
     public int iNumIngredients { get; set; }

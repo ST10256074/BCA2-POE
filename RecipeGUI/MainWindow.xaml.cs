@@ -1,23 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Forms;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace RecipeGUI
 {
@@ -29,7 +11,7 @@ namespace RecipeGUI
     /// </summary>
     public partial class MainWindow : System.Windows.Window
     {
-        
+
         #region public properties
 
         // List of Recipes
@@ -90,9 +72,9 @@ namespace RecipeGUI
         /// On Recipe Entry Collapse this method is called to add the Recipe to the Recipe Manager
         /// </summary>
         /// <param name="r"></param>
-        public void Add_Recipe(Recipe r )
+        public void Add_Recipe(Recipe r)
         {
-            System.Windows.MessageBox.Show(r.name+" Added to Recipe Manager");
+            System.Windows.MessageBox.Show(r.name + " Added to Recipe Manager");
 
             Recipes.Add(r);
             gRecipes.Items.Refresh();
@@ -125,6 +107,34 @@ namespace RecipeGUI
             {
                 selectedRecipes.Add(a as Recipe);
             }
+            MenuViewer mv = new MenuViewer(selectedRecipes);
+            mv.Show();
+
+        }
+
+        private void bSort_Asc_Click(object sender, RoutedEventArgs e)
+        {
+            // sort a listboxes items alphabetically
+            List<Recipe> sortedList = new List<Recipe>();
+            foreach (Recipe r in gRecipes.Items)
+            {
+                sortedList.Add(r);
+            }
+            sortedList.Sort((x, y) => x.Title.CompareTo(y.Title));
+            gRecipes.ItemsSource = sortedList;
+
+        }
+
+        private void bSort_Desc_Click(object sender, RoutedEventArgs e)
+        {
+            // sort a listboxes items alphabetically desc
+            List<Recipe> sortedList = new List<Recipe>();
+            foreach (Recipe r in gRecipes.Items)
+            {
+                sortedList.Add(r);
+            }
+            sortedList.Sort((x, y) => y.Title.CompareTo(x.Title));
+            gRecipes.ItemsSource = sortedList;
 
         }
     }

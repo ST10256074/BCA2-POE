@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="Title" Content="Recipe Manager" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Height="80" Width="340" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Grid Margin="60,204,45,94" Background="#FFB7B7B7"/>
-        <Button x:Name="bSort_Asc" Content="Sort Asc" Margin="79,163,366,251" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="bSort_Asc" Content="Sort Asc" Margin="79,163,366,251" RenderTransformOrigin="0.5,0.5" Click="bSort_Asc_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -25,7 +25,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="bSort_Desc" Content="Sort Desc" Margin="180,163,265,251" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="bSort_Desc" Content="Sort Desc" Margin="180,163,265,251" RenderTransformOrigin="0.5,0.5" Click="bSort_Desc_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RecipeGUI"
         mc:Ignorable="d"
-        Title="MenuViewer" Height="450" Width="800">
-    <Grid>
+        Title="MenuViewer" Height="450" Width="575">
+    <Grid Margin="0,0,-225,0">
         <Label x:Name="Title" Content="Menu Name" Margin="20,24,440,0" VerticalAlignment="Top" Height="50" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="lSteps" Content="Steps" Margin="480,24,220,374"/>
-        <Label x:Name="lCalories" Content="Calories" Margin="380,24,320,371"/>
+        <Label x:Name="lSteps" Content="Steps" Margin="480,24,220,360"/>
+        <Label x:Name="lCalories" Content="Calories" Margin="380,24,0,0" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100"/>
         <RichTextBox Margin="20,99,440,118">
             <FlowDocument>
                 <Paragraph>
@@ -17,6 +17,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        <Button Content="Back" Margin="10,404,750,10" Click="Back_Click"/>
 
     </Grid>
 </Window>

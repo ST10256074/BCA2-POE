@@ -61,8 +61,8 @@ namespace RecipeGUI
             lSteps.Content = ( recipe.steps.Count)+ " Steps";
             lCalories.Content = (recipe.checkCalorie()[1]) + " Calories";
 
-            CalorieWarning.Content = recipe.checkCalorie()[0];
-            
+            string s2 = recipe.checkCalorie()[0].ToString();
+            rCalorie.Document.Blocks.Add(new Paragraph(new Run(s2)));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

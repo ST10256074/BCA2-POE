@@ -51,6 +51,8 @@ namespace RecipeGUI
                 return;
             }
 
+
+
             MainWindow mw = new MainWindow();
             mw.Add_Recipe(recipe);
             Close();

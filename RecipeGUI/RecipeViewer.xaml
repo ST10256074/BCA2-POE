@@ -30,14 +30,20 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Label x:Name="CalorieWarning" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="340" Height="29"/>
-        <CheckBox HorizontalAlignment="Left" Margin="319,139,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,139,0,55"/>
 
         <xctk:Pie HorizontalAlignment="Left" Height="100" Margin="690,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-        <CheckBox HorizontalAlignment="Left" Margin="319,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.519"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,171,0,23" RenderTransformOrigin="0.497,0.519"/>
         <CheckBox HorizontalAlignment="Left" Margin="319,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.519" Grid.RowSpan="2"/>
-        <CheckBox HorizontalAlignment="Left" Margin="319,0,0,180" RenderTransformOrigin="0.497,0.519" Grid.Row="1" Height="15" VerticalAlignment="Bottom"/>
-        <CheckBox HorizontalAlignment="Left" Margin="319,0,0,145" VerticalAlignment="Bottom" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,30,0,180" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,65,0,145" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
+        <RichTextBox x:Name="rCalorie" Margin="375,52,20,109">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>

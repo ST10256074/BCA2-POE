@@ -5,6 +5,10 @@
 
 Github Link: https://github.com/ST10256074/BCA2-POE
 
+## Changes made from feedback:
+1. Ability to clear a recipe
+2. Calorie warnings showed on viewing
+
 ## Update:
 1. Recreation of Console app into a Desktop Application using WPF
 2. Now with filtering features 

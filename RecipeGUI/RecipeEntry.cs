@@ -36,13 +36,20 @@ namespace RecipeGUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        private void Confirmation_Click(object sender, EventArgs e)
         {
             recipe.name = tbName.Text;
             recipe.steps = new List<string> (rISteps.Text.Split('\n'));
             recipe.iNumSteps = recipe.steps.Count;
             recipe.iNumIngredients = recipe.ingredients.Count;
             recipe.Title = recipe.name;
+
+            // test if entries are blank
+            if (recipe.name == "" || recipe.steps.Count == 0 || recipe.ingredients.Count == 0)
+            {
+                MessageBox.Show("Please fill out all fields");
+                return;
+            }
 
             MainWindow mw = new MainWindow();
             mw.Add_Recipe(recipe);
@@ -57,9 +64,44 @@ namespace RecipeGUI
         private void button1_Click(object sender, EventArgs e)
         {
             string Name = tbIName.Text;
-            float Quantity = float.Parse(tbIQuan.Text);
-            float Calories = float.Parse(tbICal.Text);
-            string FoodGroup = cbIGroup.SelectedItem.ToString();
+            if (Name == "")
+            {
+                MessageBox.Show("Please enter a name for the ingredient");
+            }
+            float Quantity =0 ;
+            try
+            {
+                Quantity = float.Parse(tbIQuan.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a number for quantity");
+            }
+            float Calories =0 ;
+            try
+            {
+                Calories = float.Parse(tbICal.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a number for calories");
+            }
+            string FoodGroup = "";
+            try
+            {
+                if (cbIGroup.SelectedItem != null)
+                {
+                    FoodGroup = cbIGroup.SelectedItem.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Please choose a food group");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a food group");
+            }
             string UnitOfMeasurement = tbIUnit.Text;
 
             Ingredient ingredient = new Ingredient(Name, Quantity, Calories, FoodGroup, UnitOfMeasurement);

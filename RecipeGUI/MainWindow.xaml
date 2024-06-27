@@ -46,7 +46,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="bCreate_Menu" Content="Create Menu" Margin="376,157,50,248" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="bCreate_Menu" Content="Create Menu" Margin="376,157,50,248" RenderTransformOrigin="0.5,0.5" Click="bCreate_Menu_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -76,7 +76,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <ListBox x:Name="gRecipes" Margin="60,204,45,94" ItemsSource="{Binding Recipes}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
+        <ListBox x:Name="gRecipes" Margin="60,204,45,94" ItemsSource="{Binding Recipes}" SelectionMode="Multiple" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Title}"/>

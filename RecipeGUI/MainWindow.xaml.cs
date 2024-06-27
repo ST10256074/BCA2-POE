@@ -58,13 +58,6 @@ namespace RecipeGUI
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //gRecipes.ItemsSource = Data;
-            //DataItem item = new DataItem();
-            //item.Column1 = "Pancakes"; // Name
-            //item.Column2 = "5"; // Steps 
-            //item.Column3 = "2000"; // Calories
-            //gRecipes.Items.Add(item);
-
 
         }
 
@@ -105,9 +98,34 @@ namespace RecipeGUI
             gRecipes.Items.Refresh();
         }
 
+        /// <summary>
+        /// Test Add to Listbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Recipes.AddTest("Pancakes");
+        }
+
+        /// <summary>
+        /// Create a Menu from selected Recipes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bCreate_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            if (gRecipes.SelectedItems.Count < 2)
+            {
+                System.Windows.MessageBox.Show("Please select multiple recipes to combine.");
+                return;
+            }
+            List<Recipe> selectedRecipes = new List<Recipe>();
+            foreach (var a in gRecipes.SelectedItems)
+            {
+                selectedRecipes.Add(a as Recipe);
+            }
+
         }
     }
 }

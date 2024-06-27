@@ -169,9 +169,21 @@ namespace RecipeGUI
             System.Windows.Application.Current.Shutdown();
         }
 
+        /// <summary>
+        /// On Remove Recipe Button Click this method is called to remove a recipe from the Recipe Manager
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bRemove_Recipe_Click(object sender, RoutedEventArgs e)
         {
-
+            var a = gRecipes.SelectedItems[0];
+            string t = (a as Recipe).Title;
+            RecipeViewer recipeViewer = new RecipeViewer();
+            if (Recipes.Find(t) == null)
+            {
+                return;
+            }
+            Recipes.RemoveRecipe(Recipes.Find(t));
         }
 
         private void bFilter_Click(object sender, RoutedEventArgs e)

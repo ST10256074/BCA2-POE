@@ -41,7 +41,7 @@ namespace RecipeGUI
             recipe = r;
 
             // Set the title of the recipe
-            Title.Content = recipe.Title;
+            Title.Content = recipe.name;
 
             // Set the ingredients and steps of the recipe
             steps.Document.Blocks.Clear();
@@ -49,7 +49,7 @@ namespace RecipeGUI
             // concatenate the steps into a single string with a loop
             for (int i = 0; i < recipe.steps.Count; i++)
             {
-                steps.Document.Blocks.Add(new Paragraph(new Run( i.ToString() +". "+  recipe.steps[i])));
+                steps.Document.Blocks.Add(new Paragraph(new Run( (i+1).ToString() +". "+  recipe.steps[i])));
             }
 
             //steps.Document.Blocks.Add(new Paragraph(new Run(String.Join("\n", recipe.steps))));
@@ -57,7 +57,7 @@ namespace RecipeGUI
 
             // Set the steps of the recipe
             rIngredients.Document.Blocks.Clear();
-            string s = "Steps:\n";
+            string s = "Ingredients:\n";
             for (int i = 0; i < recipe.ingredients.Count; i++)
             {
                 s += recipe.ingredients[i].ToString() + "\n";
@@ -68,9 +68,6 @@ namespace RecipeGUI
             lSteps.Content = ( recipe.steps.Count)+ " Steps";
             lCalories.Content = (recipe.checkCalorie()[1]) + " Calories";
 
-            // Display calorie warning
-            string s2 = recipe.checkCalorie()[0].ToString();
-            rCalorie.Document.Blocks.Add(new Paragraph(new Run(s2)));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

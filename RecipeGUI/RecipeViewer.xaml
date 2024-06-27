@@ -37,13 +37,7 @@
         <CheckBox HorizontalAlignment="Left" Margin="319,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.519" Grid.RowSpan="2"/>
         <CheckBox HorizontalAlignment="Left" Margin="319,30,0,180" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
         <CheckBox HorizontalAlignment="Left" Margin="319,65,0,145" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
-        <RichTextBox x:Name="rCalorie" Margin="375,52,20,109">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <Label Content="Calorie Ranges:&#xD;&#xA;Low: Typically under 300 calories per serving.&#xD;&#xA;Moderate: Ranging from 300 to 600 calories per serving.&#xD;&#xA;High: Above 600 calories per serving." Margin="305,130,25,10" Grid.Row="1"/>
 
     </Grid>
 </Window>

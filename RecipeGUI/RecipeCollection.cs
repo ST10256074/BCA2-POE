@@ -25,6 +25,11 @@ namespace RecipeGUI
             this.Add(recipe);
         }
 
+        public void RemoveRecipe(Recipe recipe)
+        {
+            this.Remove(recipe);
+        }
+
         /// <summary>
         /// Find Method that takes in a string and finds a recipe with the same title
         /// </summary>

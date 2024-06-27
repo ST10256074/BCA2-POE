@@ -16,11 +16,20 @@ namespace RecipeGUI
             this.Add(new Recipe { Title = title });
         }
 
+        /// <summary>
+        /// Add Recipe Method that takes in a recipe and adds it to the collection
+        /// </summary>
+        /// <param name="recipe"></param>
         public void AddRecipe(Recipe recipe)
         {
             this.Add(recipe);
         }
 
+        /// <summary>
+        /// Find Method that takes in a string and finds a recipe with the same title
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
         public Recipe Find(string t)
         {
             foreach (Recipe recipe in this)
@@ -33,8 +42,13 @@ namespace RecipeGUI
             return null;
         }
 
-        // Add a find method that takes in the ingredient foodgroup, ingredient name and maximum calories and checks if an ingredient matches those values and returns the recipe
-
+        /// <summary>
+        /// Find Method that takes in a food group, ingredient name and max calories and finds recipes that fit any criteria
+        /// </summary>
+        /// <param name="foodGroup"></param>
+        /// <param name="ingredientName"></param>
+        /// <param name="maxCalories"></param>
+        /// <returns></returns>
         public List<Recipe> Find(string foodGroup, string ingredientName, int maxCalories)
         {
             // return a collection of recipes that match

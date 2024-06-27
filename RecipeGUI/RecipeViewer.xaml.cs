@@ -15,6 +15,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
 
+/// <summary>
+/// James Warden Edgecombe Hart 
+/// ST10256074
+/// PRG6221
+/// </summary>
+/// 
+
 namespace RecipeGUI
 {
     /// <summary>
@@ -61,6 +68,7 @@ namespace RecipeGUI
             lSteps.Content = ( recipe.steps.Count)+ " Steps";
             lCalories.Content = (recipe.checkCalorie()[1]) + " Calories";
 
+            // Display calorie warning
             string s2 = recipe.checkCalorie()[0].ToString();
             rCalorie.Document.Blocks.Add(new Paragraph(new Run(s2)));
         }

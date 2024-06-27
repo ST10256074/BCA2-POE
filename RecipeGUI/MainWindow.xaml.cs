@@ -3,6 +3,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
+/// <summary>
+/// James Warden Edgecombe Hart 
+/// ST10256074
+/// PRG6221
+/// </summary>
+/// 
+
+
 namespace RecipeGUI
 {
 
@@ -71,11 +79,14 @@ namespace RecipeGUI
         /// <param name="e"></param>
         private void bView_Recipe_Click(object sender, RoutedEventArgs e)
         {
+            // if no recipe is selected, show a warning
             if (gRecipes.SelectedItems.Count == 0)
             {
                 System.Windows.MessageBox.Show("Please select a recipe to view.");
                 return;
             }
+
+            // on success open up recipe viewer
             var a = gRecipes.SelectedItems[0];
             string t = (a as Recipe).Title;
             RecipeViewer recipeViewer = new RecipeViewer();
@@ -83,6 +94,7 @@ namespace RecipeGUI
             {
                 return;
             }
+
             recipeViewer.SetRecipe(Recipes.Find(t));
             recipeViewer.Show();
 

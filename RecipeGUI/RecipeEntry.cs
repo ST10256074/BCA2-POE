@@ -8,9 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+/// <summary>
+/// James Warden Edgecombe Hart 
+/// ST10256074
+/// PRG6221
+/// </summary>
+/// 
 namespace RecipeGUI
 {
+    
     public partial class RecipeEntry : Form
     {
         public RecipeEntry()
@@ -65,6 +71,7 @@ namespace RecipeGUI
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            // Error handeling for recipe data entry
             string Name = tbIName.Text;
             if (Name == "")
             {
@@ -115,6 +122,7 @@ namespace RecipeGUI
             }
             string UnitOfMeasurement = tbIUnit.Text;
 
+            // Create Ingredient and add to recipe
             Ingredient ingredient = new Ingredient(Name, Quantity, Calories, FoodGroup, UnitOfMeasurement);
             recipe.ingredients.Add(ingredient);
             listBox1.Items.Add(ingredient.name);

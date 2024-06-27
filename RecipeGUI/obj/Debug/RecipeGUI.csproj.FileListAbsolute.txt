@@ -38,5 +38,9 @@ C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\r
 C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
-C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\obj\Debug\MenuViewer.g.cs
-C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\obj\Debug\MenuViewer.baml
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.dll
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.pdb
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.xml
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\jweha\OneDrive - ADvTECH Ltd\BCA2\Prog 1\BCA2-POE\RecipeGUI\bin\Debug\LiveCharts.Wpf.xml

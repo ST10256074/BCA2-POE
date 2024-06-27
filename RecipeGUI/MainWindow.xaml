@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RecipeGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="565"
-        SizeToContent="WidthAndHeight" Loaded="Window_Loaded">
+        SizeToContent="WidthAndHeight" Loaded="Window_Loaded" Closed="Window_Closed">
     <Grid x:Name="MyGrid" Margin="0,0,-220,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="105*"/>
@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="Title" Content="Recipe Manager" HorizontalAlignment="Left" Margin="60,44,0,0" VerticalAlignment="Top" Height="80" Width="340" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Grid Margin="60,204,45,94" Background="#FFB7B7B7"/>
-        <Button x:Name="bSort_Asc" Content="Sort Asc" Margin="79,163,366,251" RenderTransformOrigin="0.5,0.5" Click="bSort_Asc_Click">
+        <Button x:Name="bSort_Asc" Content="Sort Asc" Margin="59,164,386,250" RenderTransformOrigin="0.5,0.5" Click="bSort_Asc_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -25,17 +25,17 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="bSort_Desc" Content="Sort Desc" Margin="180,163,265,251" RenderTransformOrigin="0.5,0.5" Click="bSort_Desc_Click">
+        <Button x:Name="bSort_Desc" Content="Sort Desc" Margin="140,164,305,250" RenderTransformOrigin="0.5,0.5" Click="bSort_Desc_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="0.149"/>
+                    <RotateTransform Angle="0"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Image x:Name="Image" Margin="440,22,70,294" Grid.ColumnSpan="2"/>
+        <Image x:Name="Image" Margin="440,22,178,294" Grid.ColumnSpan="2"/>
         <Button x:Name="bView_Recipe" Content="View Recipe" Margin="66,348,361,52" RenderTransformOrigin="0.5,0.5" Click="bView_Recipe_Click">
             <Button.RenderTransform>
                 <TransformGroup>
@@ -46,7 +46,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="bCreate_Menu" Content="Create Menu" Margin="376,157,50,248" RenderTransformOrigin="0.5,0.5" Click="bCreate_Menu_Click">
+        <Button x:Name="bCreate_Recipe" Content="Create Recipe" Margin="175,349,250,51" RenderTransformOrigin="0.5,0.5" Click="bCreate_Recipe_Click" >
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -56,17 +56,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="bCreate_Recipe" Content="Create Recipe" Margin="175,350,250,50" RenderTransformOrigin="0.5,0.5" Click="bCreate_Recipe_Click" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.149"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="bRemove_Recipe" Content="Remote Recipe" Margin="302,351,125,49" RenderTransformOrigin="0.5,0.5" >
+        <Button x:Name="bRemove_Recipe" Content="Remove Recipe" Margin="287,349,140,51" RenderTransformOrigin="0.5,0.5" Click="bRemove_Recipe_Click" >
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -83,7 +73,11 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-            <Button Content="Update" HorizontalAlignment="Left" Margin="175,394,0,0" VerticalAlignment="Top" Click="Button_Click_1" Visibility="Hidden"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="175,394,0,0" VerticalAlignment="Top" Click="Button_Click_1" Visibility="Hidden"/>
+        <Button x:Name="bFilter" Content="Filter" Margin="480,320,0,94" Grid.ColumnSpan="2" Click="bFilter_Click" HorizontalAlignment="Left" Width="65"/>
+        <TextBox x:Name="tbIngredient" TextWrapping="Wrap" Text="Ingredient" Margin="480,239,0,176" Grid.ColumnSpan="2" TextChanged="tbIngredient_TextChanged" HorizontalAlignment="Left" Width="65" MouseUp="tbIngredient_MouseUp"/>
+        <TextBox x:Name="tbCalories" TextWrapping="Wrap" Text="Calories" Margin="480,279,0,136" Grid.ColumnSpan="2" TextChanged="tbCalories_TextChanged" HorizontalAlignment="Left" Width="67" MouseUp="tbCalories_MouseUp"/>
+        <ComboBox x:Name="cbFoodGroup" Margin="479,204,0,212" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="65"/>
 
     </Grid>
 </Window>

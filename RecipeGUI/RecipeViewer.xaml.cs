@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Xceed.Wpf.Toolkit;
 
 namespace RecipeGUI
 {
@@ -34,13 +36,21 @@ namespace RecipeGUI
             // Set the title of the recipe
             Title.Content = recipe.Title;
 
-            // Set the ingredients of the recipe
+            // Set the ingredients and steps of the recipe
             steps.Document.Blocks.Clear();
-            steps.Document.Blocks.Add(new Paragraph(new Run(String.Join("\n", recipe.steps))));
+            steps.Document.Blocks.Add(new Paragraph(new Run("Steps:")));
+            // concatenate the steps into a single string with a loop
+            for (int i = 0; i < recipe.steps.Count; i++)
+            {
+                steps.Document.Blocks.Add(new Paragraph(new Run( i.ToString() +". "+  recipe.steps[i])));
+            }
+
+            //steps.Document.Blocks.Add(new Paragraph(new Run(String.Join("\n", recipe.steps))));
+            steps.Document.Blocks.Add(new Paragraph(new Run("-------------------")));
 
             // Set the steps of the recipe
             rIngredients.Document.Blocks.Clear();
-            string s = "";
+            string s = "Steps:\n";
             for (int i = 0; i < recipe.ingredients.Count; i++)
             {
                 s += recipe.ingredients[i].ToString() + "\n";
@@ -52,7 +62,7 @@ namespace RecipeGUI
             lCalories.Content = (recipe.checkCalorie()[1]) + " Calories";
 
             CalorieWarning.Content = recipe.checkCalorie()[0];
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

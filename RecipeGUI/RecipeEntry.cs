@@ -67,6 +67,7 @@ namespace RecipeGUI
             if (Name == "")
             {
                 MessageBox.Show("Please enter a name for the ingredient");
+                return;
             }
             float Quantity =0 ;
             try
@@ -76,6 +77,8 @@ namespace RecipeGUI
             catch (Exception)
             {
                 MessageBox.Show("Please enter a number for quantity");
+                return;
+
             }
             float Calories =0 ;
             try
@@ -85,6 +88,8 @@ namespace RecipeGUI
             catch (Exception)
             {
                 MessageBox.Show("Please enter a number for calories");
+                return;
+
             }
             string FoodGroup = "";
             try
@@ -96,11 +101,15 @@ namespace RecipeGUI
                 else
                 {
                     MessageBox.Show("Please choose a food group");
+                    return;
+
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("Please choose a food group");
+                return;
+
             }
             string UnitOfMeasurement = tbIUnit.Text;
 

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace RecipeGUI
 {
@@ -32,15 +34,33 @@ namespace RecipeGUI
 
         }
 
+        /// <summary>
+        /// On Create Recipe Button Click this method is called to create a new Recipe with Recipe Entry Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bCreate_Recipe_Click(object sender, RoutedEventArgs e)
         {
             RecipeEntry re = new RecipeEntry();
             re.Show();
         }
 
+        /// <summary>
+        /// On Window Loaded this method is called to load the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            // add food groups to combobox
+            cbFoodGroup.Items.Add("Dairy");
+            cbFoodGroup.Items.Add("Protein");
+            cbFoodGroup.Items.Add("Fruit");
+            cbFoodGroup.Items.Add("Vegetable");
+            cbFoodGroup.Items.Add("Grain");
+            cbFoodGroup.Items.Add("Sweets");
+            cbFoodGroup.Items.Add("Fats");
+            cbFoodGroup.Items.Add("Other");
         }
 
         /// <summary>
@@ -91,27 +111,10 @@ namespace RecipeGUI
         }
 
         /// <summary>
-        /// Create a Menu from selected Recipes
+        /// On Sort Ascending Button Click this method is called to sort the listbox items alphabetically asc
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bCreate_Menu_Click(object sender, RoutedEventArgs e)
-        {
-            if (gRecipes.SelectedItems.Count < 2)
-            {
-                System.Windows.MessageBox.Show("Please select multiple recipes to combine.");
-                return;
-            }
-            List<Recipe> selectedRecipes = new List<Recipe>();
-            foreach (var a in gRecipes.SelectedItems)
-            {
-                selectedRecipes.Add(a as Recipe);
-            }
-            MenuViewer mv = new MenuViewer(selectedRecipes);
-            mv.Show();
-
-        }
-
         private void bSort_Asc_Click(object sender, RoutedEventArgs e)
         {
             // sort a listboxes items alphabetically
@@ -125,6 +128,11 @@ namespace RecipeGUI
 
         }
 
+        /// <summary>
+        /// On Sort Descending Button Click this method is called to sort the listbox items alphabetically desc
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bSort_Desc_Click(object sender, RoutedEventArgs e)
         {
             // sort a listboxes items alphabetically desc
@@ -135,6 +143,41 @@ namespace RecipeGUI
             }
             sortedList.Sort((x, y) => y.Title.CompareTo(x.Title));
             gRecipes.ItemsSource = sortedList;
+
+        }
+
+        /// <summary>
+        /// On Window Close this method is called to close the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Window_Closed(object sender, System.EventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void bRemove_Recipe_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bFilter_Click(object sender, RoutedEventArgs e)
+        {
+            // create a search filter using ingredients, foodgroups and maximum calories entries
+            string ingredients = tbIngredient.Text;
+            string foodgroups = cbFoodGroup.SelectedItem.ToString();
+            string maxCalories = tbCalories.Text;
+
+        }
+
+         private void tbIngredient_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            tbIngredient.Text = "";
+        }
+
+        private void tbCalories_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            tbCalories.Text = "";
 
         }
     }

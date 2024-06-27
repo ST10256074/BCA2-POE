@@ -1,9 +1,10 @@
-﻿<Window x:Class="RecipeGUI.RecipeViewer"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RecipeGUI"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="RecipeGUI.RecipeViewer"
         mc:Ignorable="d"
         Title="RecipeViewer" Height="450" Width="640">
     <Grid>
@@ -12,7 +13,7 @@
             <RowDefinition Height="225*"/>
         </Grid.RowDefinitions>
         <Label x:Name="Title" Content="Recipe Name" Margin="20,24,280,0" VerticalAlignment="Top" Height="50" FontSize="26" Background="#FFBDE3FF" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <RichTextBox x:Name="steps" Margin="320,144,20,130" Grid.RowSpan="2">
+        <RichTextBox x:Name="steps" Margin="340,105,20,112" Grid.RowSpan="2">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="RichTextBox"/>
@@ -22,7 +23,7 @@
         <Button Content="Back" Margin="10,190,540,10" Grid.Row="1" Click="Button_Click"/>
         <Label x:Name="lSteps" Content="Steps" Margin="480,24,60,149"/>
         <Label x:Name="lCalories" Content="Calories" Margin="380,24,180,146"/>
-        <RichTextBox x:Name="rIngredients" Margin="20,144,340,130" Grid.RowSpan="2">
+        <RichTextBox x:Name="rIngredients" Margin="20,105,340,112" Grid.RowSpan="2">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="RichTextBox"/>
@@ -30,6 +31,13 @@
             </FlowDocument>
         </RichTextBox>
         <Label x:Name="CalorieWarning" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Width="340" Height="29"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,139,0,0" VerticalAlignment="Top"/>
+
+        <xctk:Pie HorizontalAlignment="Left" Height="100" Margin="690,39,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.519"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.519" Grid.RowSpan="2"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,0,0,180" RenderTransformOrigin="0.497,0.519" Grid.Row="1" Height="15" VerticalAlignment="Bottom"/>
+        <CheckBox HorizontalAlignment="Left" Margin="319,0,0,145" VerticalAlignment="Bottom" RenderTransformOrigin="0.497,0.519" Grid.Row="1"/>
 
     </Grid>
 </Window>

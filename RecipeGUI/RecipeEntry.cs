@@ -42,7 +42,7 @@ namespace RecipeGUI
             recipe.steps = new List<string> (rISteps.Text.Split('\n'));
             recipe.iNumSteps = recipe.steps.Count;
             recipe.iNumIngredients = recipe.ingredients.Count;
-            recipe.Title = recipe.name;
+            recipe.Title = recipe.name+" | "+recipe.iNumIngredients+"ing"+" | "+recipe.iNumSteps+"steps";
 
             // test if entries are blank
             if (recipe.name == "" || recipe.steps.Count == 0 || recipe.ingredients.Count == 0)

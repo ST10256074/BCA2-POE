@@ -61,6 +61,7 @@ namespace RecipeGUI
             cbFoodGroup.Items.Add("Sweets");
             cbFoodGroup.Items.Add("Fats");
             cbFoodGroup.Items.Add("Other");
+            cbFoodGroup.Items.Add("");
         }
 
         /// <summary>
@@ -165,12 +166,37 @@ namespace RecipeGUI
         {
             // create a search filter using ingredients, foodgroups and maximum calories entries
             string ingredients = tbIngredient.Text;
-            string foodgroups = cbFoodGroup.SelectedItem.ToString();
-            string maxCalories = tbCalories.Text;
+            string foodgroups = "";
+            try
+            {
+                if (cbFoodGroup.SelectedItem != null)
+                {
+                    foodgroups = cbFoodGroup.SelectedItem.ToString();
+                }
+            }
+            catch (System.Exception)
+            {
 
+            }
+            string smaxCalories = tbCalories.Text;
+            int maxCalories = 0;
+            try
+            {
+                maxCalories = int.Parse(smaxCalories);
+            }
+            catch (System.Exception)
+            {
+                maxCalories = 0;
+            }
+
+            List<Recipe> filteredRecipes = new List<Recipe>();
+            filteredRecipes = Recipes.Find(foodgroups, ingredients, maxCalories);
+
+            gRecipes.ItemsSource = filteredRecipes;
+            return;
         }
 
-         private void tbIngredient_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void tbIngredient_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             tbIngredient.Text = "";
         }

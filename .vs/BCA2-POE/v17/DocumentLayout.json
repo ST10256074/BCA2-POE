@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|c:\\users\\jweha\\onedrive - advtech ltd\\bca2\\prog 1\\bca2-poe\\recipegui\\recipecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\recipecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\recipegui\\recipeviewer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\recipeviewer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\recipegui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\recipegui\\recipeentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\recipeentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\recipegui\\recipeviewer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|solutionrelative:recipegui\\recipeviewer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F939AE6D-3F77-4624-92B0-1388612F60DE}|RecipeGUI\\RecipeGUI.csproj|C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\recipegui\\recipeentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "RecipeGUI\\MainWindow.xaml",
@@ -51,9 +55,9 @@
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "RecipeGUI\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\MainWindow.xaml.cs*",
-              "RelativeToolTip": "RecipeGUI\\MainWindow.xaml.cs*",
-              "ViewState": "AQIAAIsAAAAAAAAAAADwv5sAAAAmAAAA",
+              "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "RecipeGUI\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAiwL8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-27T11:43:05.821Z",
               "IsPinned": true,
@@ -77,7 +81,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "RecipeCollection.cs",
+              "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\RecipeCollection.cs",
+              "RelativeDocumentMoniker": "RecipeGUI\\RecipeCollection.cs",
+              "ToolTip": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\RecipeCollection.cs",
+              "RelativeToolTip": "RecipeGUI\\RecipeCollection.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAkwCgAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T16:00:41.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RecipeViewer.xaml",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\RecipeViewer.xaml",
               "RelativeDocumentMoniker": "RecipeGUI\\RecipeViewer.xaml",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RecipeEntry.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\RecipeEntry.cs",
               "RelativeDocumentMoniker": "RecipeGUI\\RecipeEntry.cs",
@@ -101,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RecipeEntry.cs",
               "DocumentMoniker": "C:\\Users\\jweha\\OneDrive - ADvTECH Ltd\\BCA2\\Prog 1\\BCA2-POE\\RecipeGUI\\RecipeEntry.cs",
               "RelativeDocumentMoniker": "RecipeGUI\\RecipeEntry.cs",

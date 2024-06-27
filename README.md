@@ -1,25 +1,25 @@
-# BCA2-POE Assignment Part 1
+# BCA2-POE Assignment POE
 # ST10256074 James Hart
 
-# Recipe Manager Part 1
+# Recipe Manager POE
 
 Github Link: https://github.com/ST10256074/BCA2-POE
 
 ## Update:
-1. Added the collection of calories and foodgroups for Recipes
-2. Added the ability to save multiple recipes
-3. Added the ability view all recipes alphabetically
-4. Recipe checks for calories exceeding 300 calories
-5. Unit Test for calorie calculation
-6. Increased colored text for better readability
+1. Recreation of Console app into a Desktop Application using WPF
+2. Now with filtering features 
+3. Selections using combo boxes
+4. Checkboxes for steps in recipes
+5. Sort ASC and DESC for recipes
 
 
 ## About
-This program allows you to create and manage an infinite amount of recipes. The Recipe stores information about the steps, ingredients, calories, foodgroups, calorie ranges and safe amounts. It provides a human-readable string representation of the recipe for easy display or sharing.
+This Application allows you to create and manage an infinite amount of recipes. The Recipe stores information about the steps, ingredients, calories, foodgroups, calorie ranges and safe amounts. It provides Visual Form of the Recipe after being adapted from a command line program.
 
 ## Prerequisites
 
 Visual Studio: A free or paid edition of Visual Studio must be used. 
+WPF Knowledge: This is due to the application using it to display its windows
 Basic C# Knowledge: This is due to this running using an IDE and not an executable.
 
 ## Getting Started
@@ -29,21 +29,19 @@ Basic C# Knowledge: This is due to this running using an IDE and not an executab
 2. Open the Project File (.sln) in Visual Studio (Microsoft Learn, 2024)
     Open a solution file or project file using visual studio
 3. Run the project 
-    Using the green arrow at the top of the page.
+    Using the green arrow at the top of the page after selecting RecipeGUI from dropdown.
 
 ## User Interaction Chain
 
-1. User is prompted with a list of commands the Recipe application can do
-2. User can choose between (New/Add Recipe, View All Recipes, View Specific Recipe, Modify Recipe, Exit Application)
-3. User creates new Recipe creates a new Recipe that is held in memory
-4. User can scale the Recipe using "Modify Recipe" method.
-5. User can view updated Recipe using "View Specific Recipe" with the recipe name
-6. User can create a new Recipe by using "New Recipe"
-7. User can exit application using "Exit Application"
+1. User is shown the main window with the ability to add, remove, filter and view recipes
+2. User creates new Recipe creates a new Recipe that is held in memory
+3. User can view created Recipe using "View Recipe" after selecting recipe from listbox with the recipe name
+4. User can remove recipe from listbox by selecting and clicking the respective button
+5. User can exit application using the red X button on the window
 
 ## Classes:
 
-### Program Class:
+### MainWindow Class:
 
 This is the main file of the program with a main loop for user interactions.
 It handles all the user inputs and console outputs effectively.
@@ -51,6 +49,7 @@ It handles all the user inputs and console outputs effectively.
 ### Recipe Class:
 
 This class represents the recipe and its variables:
+Title: Used for displaying in listbox
 name: The name of the recipe.
 iNumIngredients: The number of ingredients.
 iNumSteps: The number of steps in the recipe.
@@ -71,6 +70,15 @@ quantity: Quantity of the ingredient
 calories: The amount of calories in the ingredient
 foodGroup: The food group the ingredient belongs to
 unitOfMeasurement: The unit of measurement
+
+### RecipeCollection Class:
+
+Used to hold a custom observatble collection of the Recipe Class to be used by the list box.
+
+Methods:
+AddRecipe: Adds a recipe to collection
+Find: Finds a recipe by its name and returns it
+Find2: Finds recipes that follow the filtering options and returns them
 
 ### UnitTest1 Class:
 

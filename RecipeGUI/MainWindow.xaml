@@ -75,8 +75,8 @@
         </ListBox>
         <Button Content="Update" HorizontalAlignment="Left" Margin="175,394,0,0" VerticalAlignment="Top" Click="Button_Click_1" Visibility="Hidden"/>
         <Button x:Name="bFilter" Content="Filter" Margin="480,320,0,94" Grid.ColumnSpan="2" Click="bFilter_Click" HorizontalAlignment="Left" Width="65"/>
-        <TextBox x:Name="tbIngredient" TextWrapping="Wrap" Text="Ingredient" Margin="480,239,0,176" Grid.ColumnSpan="2" TextChanged="tbIngredient_TextChanged" HorizontalAlignment="Left" Width="65" MouseUp="tbIngredient_MouseUp"/>
-        <TextBox x:Name="tbCalories" TextWrapping="Wrap" Text="Calories" Margin="480,279,0,136" Grid.ColumnSpan="2" TextChanged="tbCalories_TextChanged" HorizontalAlignment="Left" Width="67" MouseUp="tbCalories_MouseUp"/>
+        <TextBox x:Name="tbIngredient" TextWrapping="Wrap" Text="Ingredient" Margin="480,239,0,176" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="65" MouseUp="tbIngredient_MouseUp"/>
+        <TextBox x:Name="tbCalories" TextWrapping="Wrap" Text="Calories" Margin="480,279,0,136" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="67" MouseUp="tbCalories_MouseUp"/>
         <ComboBox x:Name="cbFoodGroup" Margin="479,204,0,212" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="65"/>
 
     </Grid>
